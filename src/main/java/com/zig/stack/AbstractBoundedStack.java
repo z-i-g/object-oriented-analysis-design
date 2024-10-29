@@ -18,12 +18,12 @@ public abstract class AbstractBoundedStack<T> {
 
     //конструктор
     //постусловие: создан новый пустой стек с размером 32
-    public AbstractBoundedStack() {}
+    protected AbstractBoundedStack() {}
 
     //конструктор
     //постусловие: создан пустой стек с размером stackSize
     //если stackSize <= 0 то размер 32
-    public AbstractBoundedStack(int stackSize) {}
+    protected AbstractBoundedStack(int stackSize) {}
 
 
     // команды:

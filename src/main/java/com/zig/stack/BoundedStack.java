@@ -7,30 +7,29 @@ import java.util.Optional;
 public class BoundedStack<T> extends AbstractBoundedStack<T> {
 
     private List<T> stack; // основное хранилище стека
-    private final int defaultCapacity = 32; // размер стека по умолчанию
-    private final int capacity; // размер стека при указании размера, по умолчанию defaultSize
+    private final int max_size; // размер стека по умолчанию
     private int peek_status; // статус запроса peek()
     private int pop_status; // статус команды pop()
     private int push_status; // статус команды push()
 
     // конструктор с размером стека по умолчанию
     public BoundedStack() {
-        capacity = defaultCapacity;
+        max_size = 32;
         clear();
     }
 
     // конструктор с указанным размером стека
     public BoundedStack(int stackSize) {
         if (stackSize <= 0)
-            stackSize = defaultCapacity;
-        capacity = stackSize;
+            stackSize = 32;
+        max_size = stackSize;
         clear();
     }
 
     // команды:
     public void push(T value) {
         push_status = PUSH_ERR;
-        if (size() < capacity) {
+        if (size() < max_size) {
             stack.add(value);
             push_status = PUSH_OK;
         }
@@ -45,7 +44,7 @@ public class BoundedStack<T> extends AbstractBoundedStack<T> {
     }
 
     public void clear() {
-        stack = new ArrayList<>(capacity); // пустой список/стек
+        stack = new ArrayList<>(max_size); // пустой список/стек
 
 //        начальные статусы для предусловий peek() и pop()
         peek_status = PEEK_NIL;
