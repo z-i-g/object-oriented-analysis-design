@@ -1,0 +1,19 @@
+1.
+     public void put(i, T value);
+     public void put_left(i, T value);
+     public void put_right(i, T value);
+
+    не добавил в АТД эти методы, вместо них использовал метод insert
+2.
+    public int get_put_status(); // успешно; индекс за пределами массива
+    public int get_put_left_status(); // успешно; индекс за пределами массива
+    public int get_put_right_status(); // успешно; индекс за пределами массива
+    public int get_remove_status(); // успешно; индекс за пределами массива
+    public int get_get_status(); // успешно; индекс за пределами массива
+
+    не добавил методы запроса статусов команд
+3.
+    // постусловие: изменился размер массива с копированием текущих значений
+    public abstract void makeArray(int new_capacity);
+
+    метод является излишним, т.к. является деталью реализации
