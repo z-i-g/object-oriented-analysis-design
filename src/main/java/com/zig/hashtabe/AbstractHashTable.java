@@ -23,7 +23,7 @@ public abstract class AbstractHashTable<T> {
 
     // запросы
     // проверка наличия value
-    public abstract boolean contains(T value);
+    public abstract boolean get(T value);
 
     // дополнительные запросы
     // возвращает количество элементов в хэш-таблице

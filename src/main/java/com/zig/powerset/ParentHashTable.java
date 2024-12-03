@@ -1,6 +1,8 @@
-package com.zig.hashtabe;
+package com.zig.powerset;
 
-public class HashTable<T> extends AbstractHashTable<T> {
+import com.zig.hashtabe.AbstractHashTable;
+
+public class ParentHashTable<T> extends AbstractHashTable<T> {
     public int size;
     public int step;
     public T [] slots;
@@ -9,7 +11,7 @@ public class HashTable<T> extends AbstractHashTable<T> {
     private int removeStatus;
 
     // конструктор
-    public HashTable(int sz, int stp) {
+    public ParentHashTable(int sz, int stp) {
         super(sz);
         size = sz;
         step = stp;
