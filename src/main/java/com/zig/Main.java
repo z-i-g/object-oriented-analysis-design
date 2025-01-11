@@ -1,25 +1,16 @@
 package com.zig;
 
-import com.zig.stack.AbstractBoundedStack;
-import com.zig.stack.BoundedStack;
+import com.zig.ooapsecond.inheritance.Bicycle;
+import com.zig.ooapsecond.inheritance.Car;
+import com.zig.ooapsecond.inheritance.Engine;
+import com.zig.ooapsecond.inheritance.Transport;
 
 public class Main {
     public static void main(String[] args) {
-        BoundedStack<Integer> boundedStack = new BoundedStack<>(4);
+        Transport transport = new Car(new Engine());
+        transport.drive();
 
-        boundedStack.push(1);
-        boundedStack.push(2);
-        boundedStack.push(3);
-        boundedStack.push(4);
-        boundedStack.push(5);
-
-        if (boundedStack.get_push_status() == AbstractBoundedStack.PUSH_OK) {
-            int x = boundedStack.peek().get();
-            System.out.println(x);
-        }
-
-        System.out.println(boundedStack.get_peek_status() == AbstractBoundedStack.PEEK_OK);
-
-
+        transport = new Bicycle();
+        transport.drive();
     }
 }
