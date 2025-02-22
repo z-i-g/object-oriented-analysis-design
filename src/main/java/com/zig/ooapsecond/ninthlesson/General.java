@@ -1,4 +1,4 @@
-package com.zig.ooapsecond.reflection.ninthlesson;
+package com.zig.ooapsecond.ninthlesson;
 
 import java.io.*;
 import java.util.Objects;
