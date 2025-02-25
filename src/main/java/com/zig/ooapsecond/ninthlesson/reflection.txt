@@ -1,0 +1,5 @@
+1. Метод clone и copy следовало сделать через копировние массива байтов - ByteArrayOutputStream;
+2. Метод equals достаточно было сделать через вызов в суперклассе;
+3. Методы serialize и deserialize я сделал как раз таки через ByteArrayOutputStream/ByteArrayInputStream.
+   Старался обойтись стандартной библиотекой.
+4. Метод toString я сделал в более читабельном виде;
