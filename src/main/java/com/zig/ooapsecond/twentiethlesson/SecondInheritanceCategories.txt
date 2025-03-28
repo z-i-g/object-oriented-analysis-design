@@ -1,0 +1,72 @@
+1. Наследование с функциональной вариацией
+
+class Drink {
+    void prepare() {
+        addWater();
+    }
+
+    protected addWater(){}
+}
+
+class EspressoCoffee extend Drink {
+    @Ovveride
+    void prepare() {
+        addWater();
+        addCoffee();
+    }
+}
+
+2. Наследование вариаций
+
+// Зерновой кофе
+class Coffee {
+    void prepare(CoffeeGrinder coffeeGrinder) {
+        coffeeGrinder.grind();
+    }
+}
+
+// Растворимый кофе (молоть зерна не нужно)
+class InstantCoffee extend Coffee {
+    void prepare() {}
+}
+
+3. Наследование с конкретизацией
+
+abstract class BlockMapper {
+    void map() {
+        // общая реализованная логика
+        specialMap();
+    }
+
+    abstract void specialMap();
+}
+
+class ApplicationBlockMapper extend BlockMapper {
+    @Ovveride
+    void specialMap() {
+        // спец логика для наследника
+    }
+}
+
+4. Структурное наследование
+
+Добавление необходимого поведения путем реализации интерфейса
+
+interface Flying {
+    fly();
+}
+
+class Bird {
+    // общая логика для птиц
+}
+
+// Страус не летает
+class Ostrich extend Bird {
+
+}
+
+// Ворона летает
+class Crow extend Bird implements Flying {
+    @Ovveride
+    fly() {}
+}
