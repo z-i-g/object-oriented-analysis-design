@@ -1,0 +1,15 @@
+1. Наследование реализации
+
+На мой взгляд подходит реализация BoundedStack с курса ООАП-1.
+Когда добавляется ограничение на размер, а весь функционал наследуется от стандартного стека.
+
+2. Льготное наследование
+
+class ApplicationNotFountException extend RuntimeException {
+    private final String errorCode;
+
+    public ApplicationNotFountException(String message, Error error) {
+        super(message);
+        this.errorCode = error.getCode();
+    }
+}
