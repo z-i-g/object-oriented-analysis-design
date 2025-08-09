@@ -1,0 +1,17 @@
+Кластер 1 - Игровое поле и элементы
+•	GameBoard (анализ, реализация);
+•	Element;
+•	Bonus.
+
+Кластер 2 - Механика и обработка игрового процесса
+•	GameEngine;
+•	CombinationDetector;
+•	BoardUpdater;
+•	BonusFactory.
+
+Кластер 3 - Статистика и прогресс
+•	Score;
+•	StatisticsManager.
+
+Кластер 4 - Интерфейс пользователя
+•	UserInterface.
