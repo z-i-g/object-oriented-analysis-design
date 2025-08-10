@@ -1,10 +1,10 @@
 package com.zig.ooapthird.realization.statistic;
 
-import com.zig.ooapthird.realization.statistic.Score;
+import java.util.List;
 
-public abstract class StatisticManager {
+public abstract class AbstractStatisticManager {
     private List<Move> moves;
-    private Score score;
+    private AbstractScore score;
 
     /**
      * предусловие: move != null

@@ -1,15 +1,13 @@
 package com.zig.ooapthird.realization.statistic;
 
-public abstract class Score {
-    private int points;
+public class Score {
+    private int points = 0;
 
-    // команда
-    /**
-     * предусловие: p > 0
-     * постусловие: points == old(points) + p
-     */
-    public abstract void addPoints(int p);
+    public void addPoints(int p) {
+        points += p;
+    }
 
-    //запрос
-    public abstract int getCurrentScore();
+    public int getCurrentScore() {
+        return points;
+    }
 }
